@@ -1,0 +1,14 @@
+.idea/*
+#iml
+*.iml
+*/*.iml
+
+#compile
+target/*
+*/target/*
+*.class
+*.jar
+*/target/*.*
+
+
+
