@@ -55,4 +55,7 @@
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pc"/>
     </aop:config>
 
+    <!-- 集中式处理异常 -->
+    <bean id="exceptionHandler" class="com.zjhc.mytest_one.exception.handler.GlobalExceptionHandler"/>
+
 </beans>

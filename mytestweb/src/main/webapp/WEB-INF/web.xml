@@ -53,6 +53,8 @@
     <servlet-name>spring</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+
+
   <!--<filter>
     <filter-name>sitemesh</filter-name>
     <filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
