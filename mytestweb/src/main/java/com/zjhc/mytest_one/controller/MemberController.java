@@ -27,8 +27,13 @@ public class MemberController {
         modelAndView.addObject("students",list);
         System.out.println(list);
         modelAndView.setViewName("student/list");
-        int x= 4/0;
         return modelAndView;
     }
-
+    @RequestMapping("add")
+    public ModelAndView  add(){
+        System.out.println("controller  add ");
+        ModelAndView modelAndView =new ModelAndView();
+        modelAndView.setViewName("student/add");
+        return modelAndView;
+    }
 }

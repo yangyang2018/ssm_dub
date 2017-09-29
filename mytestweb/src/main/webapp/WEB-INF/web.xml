@@ -16,7 +16,7 @@
     <param-name>log4jRefreshInterval</param-name>
     <param-value>6000</param-value>
   </context-param>
-  <filter>
+<!--  <filter>
     <filter-name>SpringEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
     <init-param>
@@ -31,7 +31,7 @@
   <filter-mapping>
     <filter-name>SpringEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
-  </filter-mapping>
+  </filter-mapping>-->
   <listener>
     <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
   </listener>
@@ -63,4 +63,35 @@
     <filter-name>sitemesh</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>-->
+
+    <!--Hello Servlet-->
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.zjhc.mytest_one.my_servlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello.do</url-pattern>
+    </servlet-mapping>
+
+    <!--Request Servlet-->
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.zjhc.mytest_one.my_servlet.ReqInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/request.do</url-pattern>
+    </servlet-mapping>
+
+    <!--Add  Student  Servlet-->
+    <servlet>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <servlet-class>com.zjhc.mytest_one.my_servlet.AddStudentServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <url-pattern>/user/add.do</url-pattern>
+    </servlet-mapping>
 </web-app>
