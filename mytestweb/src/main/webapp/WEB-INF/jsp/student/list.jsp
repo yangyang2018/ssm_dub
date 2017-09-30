@@ -23,6 +23,7 @@
         </tr>
     </table>
 </c:forEach>
+<a href="/student/add.do" style="color: red;">添加</a>
 
 </body>
 </html>

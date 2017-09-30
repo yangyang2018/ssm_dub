@@ -11,7 +11,10 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:config/applicationContext.xml</param-value>
   </context-param>
-
+    <context-param>
+        <param-name>count</param-name>
+        <param-value>10000</param-value>
+    </context-param>
   <context-param>
     <param-name>log4jRefreshInterval</param-name>
     <param-value>6000</param-value>
@@ -53,8 +56,6 @@
     <servlet-name>spring</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
-
-
   <!--<filter>
     <filter-name>sitemesh</filter-name>
     <filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
@@ -92,6 +93,8 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>AddStudentServlet</servlet-name>
-        <url-pattern>/user/add.do</url-pattern>
+        <url-pattern>/add.do</url-pattern>
     </servlet-mapping>
+
+
 </web-app>

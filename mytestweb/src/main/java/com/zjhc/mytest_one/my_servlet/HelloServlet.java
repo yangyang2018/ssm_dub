@@ -12,6 +12,12 @@ import java.io.PrintWriter;
  */
 public class HelloServlet extends HttpServlet {
 
+
+    @Override
+    public void init() throws ServletException {
+
+    }
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -23,5 +29,9 @@ public class HelloServlet extends HttpServlet {
 
         out.close();
 
+        //获取应用上下文
+        String count = getServletContext().getInitParameter("count");
+
+        System.out.println("上下文中的count值："+count);
     }
 }

@@ -13,7 +13,7 @@ import java.util.List;
  * Created by Administrator on 2017/9/28 0028.
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/student")
 public class MemberController {
 
     @Resource

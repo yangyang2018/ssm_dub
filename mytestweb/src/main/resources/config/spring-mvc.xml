@@ -7,6 +7,7 @@
     <context:component-scan base-package="com.zjhc.mytest_one.controller"/> <!-- 启动注解支持 -->
     <mvc:annotation-driven/>
     <!-- 静态资源 -->
+    <!-- 对静态资源文件的访问 -->
     <!--<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>-->
     <!--<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>-->
     <!--<mvc:resources location="/WEB-INF/image/" mapping="/image/**"/>-->

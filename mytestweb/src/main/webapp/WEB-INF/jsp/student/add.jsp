@@ -9,9 +9,10 @@
 <html>
 <head>
     <title>添加学生信息</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 </head>
 <body>
-     <form action="add.do" method="get">
+     <form action="/add.do" method="get">
          Name:<br><input type="text" name="name"/><br>
          Sex:
          </br>男<input type="checkbox" name="sex" value="1"/>
