@@ -2,8 +2,9 @@ package com.zjhc.mytest_one.service.impl;
 
 import com.zjhc.mytest_one.dao.StudentDao;
 import com.zjhc.mytest_one.model.Student;
+import com.zjhc.mytest_one.model.utils.ResponseResult;
 import com.zjhc.mytest_one.service.StudentService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -18,23 +19,44 @@ public class StudentServiceImpl implements StudentService
     @Resource
     private StudentDao studentDao;
 
-    public Boolean addStudent(Student student) {
-
-        return studentDao.insert(student);
+    public ResponseResult addStudent(Student student) {
+        ResponseResult responseResult = new ResponseResult();
+        boolean bool = studentDao.insert(student);
+        if (bool == true){
+            responseResult.setSuccess(true);
+        }
+        return responseResult;
     }
 
-    public Boolean deleteStudentById(Integer id) {
-        Student student = new Student();
+    public ResponseResult deleteStudentById(Integer id) {
+        ResponseResult responseResult = new ResponseResult();
+        Student  student =new Student();
         student.setId(id);
-        return studentDao.delete(student);
+        boolean bool = studentDao.delete(student);
+        if (bool == true){
+            responseResult.setSuccess(true);
+        }
+        return responseResult;
     }
 
-    public Boolean updateStudentById(Student student) {
-
-        return studentDao.update(student);
+    public ResponseResult updateStudentById(Student student) {
+        ResponseResult responseResult = new ResponseResult();
+        boolean bool = studentDao.update(student);
+        if (bool == true){
+            responseResult.setSuccess(true);
+        }
+        return responseResult;
     }
 
-    public List<Student> findAllStudent(Student student) {
-        return studentDao.select(student);
+    public ResponseResult findAllStudent(Student student) {
+        ResponseResult responseResult = new ResponseResult();
+        List<Student> students = studentDao.select(student);
+        if (CollectionUtils.isNotEmpty(students)){
+            responseResult.setSuccess(true);
+            responseResult.setData(students);
+        }else {
+            responseResult.setMessage("没有数据");
+        }
+        return responseResult;
     }
 }
