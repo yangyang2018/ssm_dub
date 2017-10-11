@@ -220,11 +220,12 @@
         <!--<groupId>com.google.code.gson</groupId>-->
         <!--<artifactId>gson</artifactId>-->
         <!--<version>${gson.version}</version>-->
-        <!--</dependency>--> <!--<dependency>-->
-        <!--<groupId>org.sitemesh</groupId>-->
-        <!--<artifactId>sitemesh</artifactId>-->
-        <!--<version>3.0.0</version>-->
         <!--</dependency>-->
+        <dependency>
+        <groupId>org.sitemesh</groupId>
+        <artifactId>sitemesh</artifactId>
+        <version>3.0.0</version>
+        </dependency>
         <!--<!–Shiro–>-->
         <!--<dependency>-->
         <!--<groupId>org.apache.shiro</groupId>-->

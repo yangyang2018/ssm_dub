@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> 开发中 。。。。。</title>
-    <script type="text/javascript" src="./assets/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-1.7.2.min.js"></script>
 </head>
 <body>
 <h2>Hello World!</h2>
