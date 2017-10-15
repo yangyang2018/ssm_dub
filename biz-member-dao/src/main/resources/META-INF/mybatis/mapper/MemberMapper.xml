@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjhc.mytest_one.dao.MemberDao">
+
+    <resultMap id="BaseDtoResult" type="com.zjhc.mytest_one.model.BaseDto" >
+        <id property="id" column="id"/>
+        <result property="createTime" column="createTime"/>
+        <result property="modifyTime" column="modifyTime"/>
+    </resultMap>
+
+    <resultMap  id="MemberDtoResult" type="com.zjhc.mytest_one.model.MemberDto"  extends="BaseDtoResult">
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="sex" column="sex"/>
+        <result property="desc" column="desc"/>
+    </resultMap>
+
+    <sql id="columnsSql">
+        id,
+        username,
+        password,
+        sex,
+        `desc`,
+        createTime,
+        modifyTime
+    </sql>
+
+    <select id="findAllMembers" resultMap="MemberDtoResult">
+        SELECT
+        <include refid="columnsSql"/>
+        FROM
+        member
+    </select>
+</mapper>
